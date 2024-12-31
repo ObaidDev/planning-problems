@@ -1,0 +1,12 @@
+<solver>
+    <!-- Solution class -->
+    <solutionClass>ma.plutus.planner.dtos.TaskAssignmentSolution</solutionClass>
+    <!-- Entity class -->
+    <entityClass>ma.plutus.planner.entities.assignment.TaskAssignment</entityClass>
+    <!-- Constraint provider -->
+    <constraintProviderClass>ma.plutus.planner.providers.TaskAssignmentConstraintProvider</constraintProviderClass>
+    <!-- Termination condition -->
+    <termination>
+        <secondsSpentLimit>30</secondsSpentLimit>
+    </termination>
+</solver>

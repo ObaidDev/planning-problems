@@ -1,0 +1,940 @@
+{
+    "rooms": [
+      {
+        "id": "1",
+        "name": "R1",
+        "capacity": 34
+      },
+      {
+        "id": "2",
+        "name": "R2",
+        "capacity": 44
+      }
+    ],
+    "timeSlots": [
+      {
+        "id": "1",
+        "startTime": "2023-10-01T09:00:00",
+        "endTime": "2023-10-01T12:00:00"
+      },
+      {
+        "id": "2",
+        "startTime": "2023-10-01T13:00:00",
+        "endTime": "2023-10-01T16:00:00"
+      },
+      {
+        "id": "3",
+        "startTime": "2023-10-02T09:00:00",
+        "endTime": "2023-10-02T12:00:00"
+      }
+    ],
+    "courses": [],
+    "exams": [
+      {
+        "id": "E1",
+        "course": {
+          "id": "158baa53-97e1-4cfa-bce2-73058965df9f",
+          "coursType": null,
+          "studentsEnrolled": [
+            {
+              "id": "9455a120-53d1-46e5-96a7-a88853648a0d",
+              "name": "Stevie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "339c420c-8cdb-49f3-8e55-9bacdc4a298e",
+              "name": "Dasya",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "ec7c049b-05b3-4981-80e6-55d9a5f093e1",
+              "name": "Court",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c6c24adc-6806-447e-8171-ea30afc0782c",
+              "name": "Melisent",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "5a98bf61-829c-4d4b-9f53-78df9fa99972",
+              "name": "Niel",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c63d8f36-4137-408f-8503-d34f9ce32717",
+              "name": "Rossy",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "80d57397-e447-490b-b11f-645fb7505750",
+              "name": "Kristel",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "71f17878-427f-446e-808e-0efa4c58e550",
+              "name": "Kathy",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0ec505b6-6bb5-4dd8-b545-41a8cca10b7e",
+              "name": "Kori",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8778d201-c23b-4d49-a501-e11fb843c878",
+              "name": "Salem",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "3c349f97-7b84-4e6d-83b8-7a60a639300b",
+              "name": "Lucius",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "edf76ab3-0609-484e-b1f8-496eac56dc3d",
+              "name": "Lorene",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "6b8b9da7-860f-4cd6-9d40-d681dd905dfb",
+              "name": "Denys",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "60b089e2-f03c-4884-8d47-42567b7f9193",
+              "name": "Franky",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c846b802-fb34-41ff-9688-aecc9c244999",
+              "name": "Kaleb",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "e4783657-21c2-431f-b17c-7221a777200b",
+              "name": "Claus",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c1ac73d3-a7d8-40b6-953a-5dea9b3a0fb9",
+              "name": "Margarette",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8dc0dce9-58ff-45be-b32f-b68f05f977e8",
+              "name": "Moll",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "812271c6-2929-4a49-bef0-1e3200f4d32e",
+              "name": "Caressa",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "bb0ae667-0d3e-42a3-8b63-d04955cffa4f",
+              "name": "Glenden",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "70f41b26-256b-44b2-8d72-381bf1f478b8",
+              "name": "Kittie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "40548e96-6307-4504-9824-e3a1a3e01c43",
+              "name": "Jeddy",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b7a841e0-8615-4784-803f-8b90344d2932",
+              "name": "Archie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "9630c250-9e17-41da-9547-f12aa374c7ba",
+              "name": "Jimmy",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "66f8c399-04a9-41a3-9fc1-aaddeeb64ebf",
+              "name": "Clayson",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "2c55c134-2184-4de7-b831-9a6d6bb3043a",
+              "name": "Maryjane",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "83202ca2-229c-4c52-87d7-0f7431ea4a3e",
+              "name": "Bryce",
+              "coursesEnrolled": null
+            }
+          ],
+          "numberOfStudents": 27
+        },
+        "room": {
+          "id": "1",
+          "name": "R1",
+          "capacity": 34
+        },
+        "timeSlot": {
+          "id": "1",
+          "startTime": "2023-10-01T09:00:00",
+          "endTime": "2023-10-01T12:00:00"
+        }
+      },
+      {
+        "id": "E2",
+        "course": {
+          "id": "0f336953-8e2f-409e-b6da-d119c61da9c8",
+          "coursType": null,
+          "studentsEnrolled": [
+            {
+              "id": "d24146d5-e8f4-4c8c-999d-c6fcd0aeee71",
+              "name": "Peggie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "9d14cd5e-17af-419d-b330-208a235558e2",
+              "name": "Margret",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "dfdb2ef4-b238-4a23-9fb2-2490e7d82594",
+              "name": "Padget",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0f7331e9-31a5-4ce8-a914-b40dc861b335",
+              "name": "Janek",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "4ae65506-763f-4269-b08a-5dc957395380",
+              "name": "Jodie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0fca3a34-8ac5-497f-a39c-a6dd5c2cbcc9",
+              "name": "Albert",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "27718b55-fa2a-4282-ab13-fc415a705abf",
+              "name": "Prudi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1ff182f1-d67c-4278-b04d-c06eef461187",
+              "name": "Ray",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "cbad1017-979b-460a-b87f-9c48ab7c8ff7",
+              "name": "Ingelbert",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "584ae38a-9398-40b5-862b-cb1f0d726bd7",
+              "name": "Dareen",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "4950cab9-7b50-488f-b384-e706ff4b1010",
+              "name": "Trixi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "2372128f-8c27-451d-a363-bba72c12a33d",
+              "name": "Raimundo",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c5c02a45-6fd3-45c7-8950-992db273c5aa",
+              "name": "Donetta",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "deb208ef-94f0-470b-8578-a99a1ebf57b8",
+              "name": "Rawley",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b8aae876-879a-48d9-a492-2825eac39cee",
+              "name": "Del",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "77880a60-6e02-4a9a-93ed-65425cbc219e",
+              "name": "Margi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0ec0f32a-8360-4f3d-90ef-21854404a825",
+              "name": "Rosette",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d2f4a583-7b3b-4b32-be38-dd5568c257ac",
+              "name": "Marylin",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b0f8157c-3c97-482a-a081-d2f5af8c25ee",
+              "name": "Doralyn",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b683a742-cea4-4148-ac39-f0df6fe85f78",
+              "name": "Barton",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1ce6d714-aef4-47ca-88d2-671183a4ac92",
+              "name": "Gabey",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "af1e8591-1f10-42d1-8bab-81ff7f196150",
+              "name": "Barney",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "240e42c4-f61c-458b-804d-3cea090fb614",
+              "name": "Celine",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "17956796-776b-4dce-96a7-c9ba1007847b",
+              "name": "Gan",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "98e6f1cc-37d2-4961-8349-5c9059b43773",
+              "name": "Muffin",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d70f2b64-74d3-4c88-a7f9-7c6fa6bfccdf",
+              "name": "Daryle",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "fb0af3df-429f-445e-a439-ebcdd48327c1",
+              "name": "Wood",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d582c447-8831-4ca5-8df2-94fe2715b9e4",
+              "name": "Jake",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b2f4373c-7c28-4d70-9f73-a2e3088dbc67",
+              "name": "Jeniece",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b3f28ee1-41bc-4153-84b4-8f60d2be616f",
+              "name": "Mohandas",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "2c993348-26a6-4093-af03-1ce8fe38664b",
+              "name": "Jonas",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "32805c9e-2ba9-4fde-b6fd-51dd6923bfdf",
+              "name": "Georgeanne",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f0e9516d-5473-4607-8626-d99239ed218c",
+              "name": "Ravid",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "e2072034-4180-4e64-bb85-f786c55c2b3d",
+              "name": "Paddie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "6dd70e8f-485c-4249-89b3-644b1ce76aed",
+              "name": "Bryn",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "cd4f1b19-1a64-40fb-bddf-db56b4205e1f",
+              "name": "Jo",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d0884ee6-f369-454a-bbc8-c5fd13a1bb3f",
+              "name": "Leshia",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "5357a719-e2d4-4de9-abad-3f4487a9d3ce",
+              "name": "Monro",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c15ff024-cc5c-4404-9a1f-31aa139fb5be",
+              "name": "Yorgo",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "75ae9e24-8142-498a-b583-a19adec15a86",
+              "name": "Lou",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "25e8d280-e489-4a61-a7f8-74f0185b0e59",
+              "name": "Belinda",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "eca92c18-f4bd-40a9-8b4b-402238b0f4b6",
+              "name": "Kele",
+              "coursesEnrolled": null
+            }
+          ],
+          "numberOfStudents": 42
+        },
+        "room": {
+          "id": "2",
+          "name": "R2",
+          "capacity": 44
+        },
+        "timeSlot": {
+          "id": "1",
+          "startTime": "2023-10-01T09:00:00",
+          "endTime": "2023-10-01T12:00:00"
+        }
+      },
+      {
+        "id": "E3",
+        "course": {
+          "id": "1449c002-b52b-44c5-92d7-248347a8904b",
+          "coursType": null,
+          "studentsEnrolled": [
+            {
+              "id": "1f9aefd7-b970-4773-8a9c-dadf62d8250a",
+              "name": "Lyndell",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "970930b6-d4b9-457d-b878-ac5dad2aa7bb",
+              "name": "Efren",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b75f9e55-462a-4b8b-896c-420963a9afc8",
+              "name": "Tamarah",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "894819e1-a55a-4fb7-8b99-bd67e7d0dade",
+              "name": "Nicolas",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0e726a6d-ce5d-4b1b-814a-c5fb0bbec024",
+              "name": "Hill",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "a6f696c4-fa44-4b67-9d84-56749c8a8329",
+              "name": "Addie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f54c8cd9-794b-4b69-ac27-558ecdc530a2",
+              "name": "Zola",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f5e0d7ad-ab0e-4fbb-b68c-1eb3463e7058",
+              "name": "Roseanne",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f63a67f7-037e-4eb6-a51b-d7924a30268d",
+              "name": "Chancey",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1dbae6a1-9051-42d2-ab76-12544219e3df",
+              "name": "Ralph",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "7daa887d-3ba7-42e1-9feb-46fa719347c0",
+              "name": "Vanya",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "6f304c7b-70b0-4260-911f-a5b349598921",
+              "name": "Blanch",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f14895a8-93d0-43c4-bc58-21dd67d67e59",
+              "name": "Bernadine",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "ac489d6a-af03-4daf-a089-03ab63097042",
+              "name": "Shaylyn",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b8aae876-879a-48d9-a492-2825eac39cee",
+              "name": "Del",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "467af5e5-e82b-4a40-88d5-3d6cad6f2713",
+              "name": "Opal",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c04dc783-d4d9-4d42-a414-bf312df619d0",
+              "name": "Tomasine",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "77880a60-6e02-4a9a-93ed-65425cbc219e",
+              "name": "Margi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "e32b88cc-706a-4e74-82cb-f73b8d86edfd",
+              "name": "Willette",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "855bc824-1c0f-40fa-9328-6367590d7d9e",
+              "name": "Duff",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0b81763d-3d6b-4ebf-a945-386f7107821d",
+              "name": "Byram",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d2f4a583-7b3b-4b32-be38-dd5568c257ac",
+              "name": "Marylin",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "a9767822-e189-4830-beb2-0f3d35205a64",
+              "name": "Sharia",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "814e02d7-b971-4b68-9e9d-f1c2a6c0c619",
+              "name": "Antons",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "fd2bd6bc-f20e-4f60-bc4a-722099207792",
+              "name": "Budd",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d53aa871-8a85-49e7-b92a-fc3ac3849a12",
+              "name": "Laughton",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "a71b1bdb-e6e0-4db4-ad05-5ed53963f833",
+              "name": "Pete",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "98e6f1cc-37d2-4961-8349-5c9059b43773",
+              "name": "Muffin",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "e64b1aeb-db89-45f3-a5bc-cef67d00f595",
+              "name": "Sly",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8d6395ed-3dfe-473b-8861-ecd7bb84f407",
+              "name": "Archer",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "10a7e32a-b312-4372-8458-824dff4d1f10",
+              "name": "Jilly",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b3f28ee1-41bc-4153-84b4-8f60d2be616f",
+              "name": "Mohandas",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "9d15563c-6fc9-4e20-adcc-10f00b509755",
+              "name": "Carmelia",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "fcc7fa33-2d3e-439c-9706-6203f731b4b7",
+              "name": "Elli",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0e823568-336b-4783-a933-7c4c9b00c6d1",
+              "name": "Dame",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "da584ffd-d283-4c2d-a8f7-05c903e77a2d",
+              "name": "Vale",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "84915fd2-5bbe-4ded-a39e-c2ae3193ac4a",
+              "name": "Danyelle",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "98823298-5227-40a9-b4c0-927e878545b3",
+              "name": "Abbey",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "878a9680-cb30-4341-b681-0b104b37c37e",
+              "name": "Edouard",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "732c626c-b4b1-4c23-93a6-a3d85f186b57",
+              "name": "Casey",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "66ee4c1d-3f8d-40ea-a815-9b58897bf9aa",
+              "name": "Randal",
+              "coursesEnrolled": null
+            }
+          ],
+          "numberOfStudents": 41
+        },
+        "room": {
+          "id": "2",
+          "name": "R2",
+          "capacity": 44
+        },
+        "timeSlot": {
+          "id": "2",
+          "startTime": "2023-10-01T13:00:00",
+          "endTime": "2023-10-01T16:00:00"
+        }
+      },
+      {
+        "id": "E4",
+        "course": {
+          "id": "ff7b97c0-4ff5-4107-82b1-249be04c2e09",
+          "coursType": null,
+          "studentsEnrolled": [
+            {
+              "id": "ff57f817-3c64-4107-8572-e96324255823",
+              "name": "Roby",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "54eb95ae-15e0-4f67-844a-bf6cab56e975",
+              "name": "Minny",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d29bd028-5a5e-445d-b63d-acf36486ac2a",
+              "name": "Winthrop",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "98c0b2f7-2579-43ab-8c96-0dcae49f594e",
+              "name": "Randi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "3515dca0-6c41-4b3b-9f23-f726a93294de",
+              "name": "Fan",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "9dd14110-a10e-4f3b-911f-9e2b72b4cc99",
+              "name": "Maurizio",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c733abca-607c-41b3-a661-d264f640285f",
+              "name": "Hershel",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "ccc81a6e-88c1-4536-b628-54638dff2eff",
+              "name": "Melonie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f2e8ffa8-9459-445d-a0ec-b51432f7ce9d",
+              "name": "Ardath",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "2d732ae2-f4db-4192-88a4-fdd7125e55c1",
+              "name": "Dian",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "55db6a17-ce43-4c26-9514-69bd7e6dc85c",
+              "name": "Zechariah",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d59265da-920e-473b-b7ad-ae9ed400dd53",
+              "name": "Frankie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "69a48479-0fab-44a1-b06f-44f1894d6faf",
+              "name": "Adham",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0a79ee94-c8f7-4b31-8eaf-07391df3e781",
+              "name": "Dasha",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "27261e1b-53b1-4700-b8ee-3f167582ddb1",
+              "name": "Eric",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "75d8e64b-37cd-478d-aa8b-71242a633657",
+              "name": "Isabel",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "86e1d811-a6ee-4a17-a338-9857e7be2dde",
+              "name": "Ibbie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "3efc9d6f-1df5-4132-a582-a5f31e5af47a",
+              "name": "Anatollo",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8d406f8f-91bf-4e46-a4ee-8d9b95f5c9ea",
+              "name": "Nicolette",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0a9a2e8d-d221-4139-ad4e-240962f1bc21",
+              "name": "Benyamin",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "c3a9ee35-5f4a-46af-b380-b4c00082f43a",
+              "name": "Natalina",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "0152741d-e85c-40fd-85ff-a37c550566f7",
+              "name": "Berti",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "52c1bb38-bab6-48e9-a8fe-fd826b8d4429",
+              "name": "Allayne",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8cd98314-f077-4800-b21d-0dda1414372c",
+              "name": "Kasey",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b98e4f5a-afbf-45ae-a45a-cdf3127fcf74",
+              "name": "Letitia",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "86de1103-c6c1-4842-9c28-8aca539dd006",
+              "name": "Andi",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "df1488f1-70c3-4d9f-9ba5-9b7cecc260a4",
+              "name": "Donna",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "871aa05b-b575-4ad5-86c5-a3d68153a275",
+              "name": "Nick",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1e99c8d3-fe92-4297-8776-c8dd521d41e7",
+              "name": "Dorie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "add9edbf-bbb4-44d0-ac5d-ebc1b3430c7d",
+              "name": "Terese",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "d4747f84-d5c3-4a5b-86f8-0e350c0ef8f3",
+              "name": "Dillon",
+              "coursesEnrolled": null
+            }
+          ],
+          "numberOfStudents": 31
+        },
+        "room": {
+          "id": "1",
+          "name": "R1",
+          "capacity": 34
+        },
+        "timeSlot": {
+          "id": "2",
+          "startTime": "2023-10-01T13:00:00",
+          "endTime": "2023-10-01T16:00:00"
+        }
+      },
+      {
+        "id": "E5",
+        "course": {
+          "id": "2ea6687d-57bd-4a98-9a50-e14461ef3850",
+          "coursType": null,
+          "studentsEnrolled": [
+            {
+              "id": "33072e72-8213-4ff8-b988-5d2361d5661c",
+              "name": "Bernette",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "cee06530-c2c9-44e8-b729-599236989f13",
+              "name": "Hesther",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "8644fd37-5d5f-4f98-a834-4a5063232776",
+              "name": "Meggie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "f2f0013d-ae3c-4ae3-baef-06842b3c2401",
+              "name": "Jania",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "3ba0cc43-dbee-4a1a-ae76-1550601b758c",
+              "name": "Ky",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "7ff3e15b-faf6-4b64-8c04-8131dd711316",
+              "name": "Burg",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "20944eac-c35d-48b1-8fd8-0eed59292110",
+              "name": "Cecily",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "714a4c5c-39f4-4421-951f-9af2ebc3fd12",
+              "name": "Gordie",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "a194c47b-98df-47a6-a6fb-ff9eb3a5ee46",
+              "name": "Winfred",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "192d2a66-310e-4a39-8e54-6f52f55785da",
+              "name": "Faustina",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "5e0c05ff-c646-4683-86c2-a09e8654c1b6",
+              "name": "Hillier",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "191bcf9b-bcf0-41c6-978e-665b8ff0a3b3",
+              "name": "Bret",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1fbf075b-a682-4a73-8751-a3dd27d6c4e1",
+              "name": "Demetra",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "00cde27d-c215-4566-a02e-9763e9065b6e",
+              "name": "Dionne",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "df5698ff-9172-449f-ac29-d4f8a06e79d3",
+              "name": "Brandise",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "b7d783e0-1f47-4aef-b450-f7ffcfc18400",
+              "name": "Lexy",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "10a04ebf-1f63-4162-aa69-283c54bd1cdd",
+              "name": "Lindsay",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "1c66db37-2e19-436a-b707-01f9b2807cd3",
+              "name": "Charil",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "46e3142f-ca66-4624-b680-4ceec926fcd0",
+              "name": "Leonelle",
+              "coursesEnrolled": null
+            },
+            {
+              "id": "6133ee0b-6b31-4e9e-ac44-5e2e697783ae",
+              "name": "Kirsti",
+              "coursesEnrolled": null
+            }
+          ],
+          "numberOfStudents": 20
+        },
+        "room": {
+          "id": "1",
+          "name": "R1",
+          "capacity": 34
+        },
+        "timeSlot": {
+          "id": "3",
+          "startTime": "2023-10-02T09:00:00",
+          "endTime": "2023-10-02T12:00:00"
+        }
+      }
+    ],
+    "score": "-5hard/0soft"
+}

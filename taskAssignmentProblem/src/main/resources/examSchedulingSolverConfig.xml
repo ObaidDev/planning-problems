@@ -1,0 +1,12 @@
+<solver>
+    <!-- Solution class -->
+    <solutionClass>ma.plutus.planner.dtos.ExamSolution</solutionClass>
+    <!-- Entity class -->
+    <entityClass>ma.plutus.planner.entities.exam_scheduling.Exam</entityClass>
+    <!-- Constraint provider -->
+    <constraintProviderClass>ma.plutus.planner.providers.ExamConstraintProvider</constraintProviderClass>
+    <!-- Termination condition -->
+    <termination>
+        <secondsSpentLimit>30</secondsSpentLimit>
+    </termination>
+</solver>
