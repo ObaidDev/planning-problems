@@ -8,10 +8,10 @@ COURSE_TYPES = ["MATHEMATICS", "PHYSICS", "CHEMSITRY", "BIOLOGY", "COMPUTER_SCIE
 
 def generate_exam_schedule_data_with_students():
     num_rooms = 5
-    num_time_slots = 8
-    num_courses = 10
+    num_time_slots = 4
+    num_courses = 5
     num_students = 50
-    num_exams = 10
+    num_exams = 5
 
     # Generate random time slots
     def random_time_slots():

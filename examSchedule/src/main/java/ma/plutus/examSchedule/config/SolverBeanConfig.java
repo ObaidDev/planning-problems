@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import ai.timefold.solver.core.api.score.ScoreManager;
+import ai.timefold.solver.core.api.score.buildin.hardsoft.HardSoftScore;
 import ai.timefold.solver.core.api.solver.Solver;
 import ai.timefold.solver.core.api.solver.SolverFactory;
 import ai.timefold.solver.core.config.solver.SolverConfig;
@@ -32,5 +34,21 @@ public class SolverBeanConfig {
 
 
         return solverFactory.buildSolver();
+    }
+
+
+    @Bean
+    public ScoreManager<ExamSolution, HardSoftScore> scoreManager() {
+
+        SolverConfig solverConfig = (new SolverConfig())
+            .withSolutionClass(ExamSolution.class)
+            .withEntityClassList(List.of(Exam.class))
+            .withConstraintProviderClass(ExamConstraintProvider.class)
+            .withTerminationConfig(new TerminationConfig().withSecondsSpentLimit(30L));
+
+
+        SolverFactory<ExamSolution> solverFactory = SolverFactory.create(solverConfig);
+        
+        return ScoreManager.create(solverFactory);
     }
 }
