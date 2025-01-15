@@ -18,10 +18,10 @@ public enum CoursType {
 
 
     /**
-     * Chemistry
+     * CHEMISTRY
      */
 
-    CHEMSITRY ,
+    CHEMISTRY ,
 
 
     /**
