@@ -2,46 +2,60 @@ package ma.plutus.vehicle_routing.dto;
 
 import java.util.Map;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@JsonFormat(shape = JsonFormat.Shape.ARRAY)
 public class Location {
-    
-    private static final double EARTH_RADIUS = 6371;
 
     private double latitude;
     private double longitude;
 
+    @JsonIgnore
     private Map<Location, Long> drivingTimeSeconds;
 
-
-
-
-
-    /***
-     * calculate distance between tow locations .
-     */
-    public double getDistanceTo(Location location2) {
-        
-        double dLat = location2.getLatitude() - this.getLatitude();
-        double dLon = location2.getLongitude() - this.getLongitude();
-
-        // Haversine formula
-        double a = Math.pow(Math.sin(dLat / 2), 2) +
-                   Math.cos(this.getLatitude()) * Math.cos(location2.getLatitude()) *
-                   Math.pow(Math.sin(dLon / 2), 2);
-
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        
-        return EARTH_RADIUS * c;
+    @JsonCreator
+    public Location(@JsonProperty("latitude") double latitude, @JsonProperty("longitude") double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
+    public double getLatitude() {
+        return latitude;
+    }
 
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public Map<Location, Long> getDrivingTimeSeconds() {
+        return drivingTimeSeconds;
+    }
+
+    /**
+     * Set the driving time map (in seconds).
+     *
+     * @param drivingTimeSeconds a map containing driving time from here to other locations
+     */
+    public void setDrivingTimeSeconds(Map<Location, Long> drivingTimeSeconds) {
+        this.drivingTimeSeconds = drivingTimeSeconds;
+    }
+
+    /**
+     * Driving time to the given location in seconds.
+     *
+     * @param location other location
+     * @return driving time in seconds
+     */
     public long getDrivingTimeTo(Location location) {
         return drivingTimeSeconds.get(location);
     }
+
+    @Override
+    public String toString() {
+        return latitude + "," + longitude;
+    }
+
 }
