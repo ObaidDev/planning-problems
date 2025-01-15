@@ -17,9 +17,12 @@ public class VehicleConstraintProvider implements ConstraintProvider{
     public static final String MINIMIZE_TRAVEL_TIME = "minimizeTravelTime";
 
     @Override
-    public Constraint @NonNull [] defineConstraints(@NonNull ConstraintFactory constraintFactory) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'defineConstraints'");
+    public Constraint @NonNull [] defineConstraints(@NonNull ConstraintFactory factory) {
+        return new Constraint[] {
+            vehicleCapacity(factory),
+            serviceFinishedAfterMaxEndTime(factory),
+            minimizeTravelTime(factory)
+        };
     }
 
 
@@ -35,7 +38,7 @@ public class VehicleConstraintProvider implements ConstraintProvider{
 
     protected Constraint serviceFinishedAfterMaxEndTime(ConstraintFactory factory) {
         return factory.forEach(Visit.class)
-                .filter(Visit::isServiceFinshedAfterMaxendTime)
+                .filter(Visit::isServiceFinishedAfterMaxEndTime)
                 .penalizeLong(HardSoftLongScore.ONE_HARD,
                         Visit::getServiceFinishedDelayInMinutes)
                 .asConstraint(SERVICE_FINISHED_AFTER_MAX_END_TIME);
