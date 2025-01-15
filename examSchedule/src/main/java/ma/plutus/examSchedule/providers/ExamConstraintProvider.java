@@ -41,7 +41,8 @@ public class ExamConstraintProvider implements ConstraintProvider{
                             Joiners.equal(Exam::getTimeSlot) ,
                             Joiners.lessThan(Exam::getId)
                         )
-                        .penalize("No two exams can be scheduled in the same room at the same time", HardSoftScore.ONE_HARD);
+                        .penalize(HardSoftScore.ONE_HARD)
+                        .asConstraint("No two exams can be scheduled in the same room at the same time");
     }
 
 
@@ -54,7 +55,8 @@ public class ExamConstraintProvider implements ConstraintProvider{
 
         return factory.forEach(Exam.class)
                         .filter(exam ->exam.getCourse().getNumberOfStudents() > exam.getRoom().getCapacity())
-                       .penalize("The room capacity must not be exceeded.", HardSoftScore.ONE_HARD);
+                       .penalize(HardSoftScore.ONE_HARD)
+                       .asConstraint("The room capacity must not be exceeded.");
 
     }
 
@@ -71,12 +73,28 @@ public class ExamConstraintProvider implements ConstraintProvider{
                         .join(
                             Exam.class ,
                             Joiners.equal(Exam::getTimeSlot),
-                            Joiners.filtering((exam1 , exam2)-> hasStudentConflict(exam1, exam2))
+                            Joiners.filtering((exam1 , exam2)-> !exam1.equals(exam2) && hasStudentConflict(exam1, exam2))
                         )
-                        .penalize("No student can have two exams at the same time.", HardSoftScore.ONE_HARD);
+                        .penalize(HardSoftScore.ONE_HARD)
+                        .asConstraint("No student can have more than one exam at the same time");
 
     }
 
+
+    private Constraint noStudentExamOverlap(ConstraintFactory constraintFactory) {
+        return constraintFactory
+            .forEach(Exam.class) // Iterate over all exams
+            .join(Exam.class, // Join with another exam
+                Joiners.equal(Exam::getTimeSlot), // Same timeslot
+                Joiners.filtering((exam1, exam2) -> 
+                    !exam1.equals(exam2) && // Avoid comparing the same exam
+                    exam1.getCourse().getStudentsEnrolled().stream()
+                        .anyMatch(student -> exam2.getCourse().getStudentsEnrolled().contains(student))
+                ) // Check if any student is enrolled in both exams
+            )
+            .penalize(HardSoftScore.ONE_HARD) // Penalize hard score for violations
+            .asConstraint("No student can have two exams at the same time");
+    }
 
 
 
