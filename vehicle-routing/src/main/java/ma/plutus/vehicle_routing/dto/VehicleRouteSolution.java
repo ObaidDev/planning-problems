@@ -14,10 +14,13 @@ import ai.timefold.solver.core.api.domain.solution.PlanningSolution;
 import ai.timefold.solver.core.api.domain.valuerange.ValueRangeProvider;
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.solver.SolverStatus;
+import lombok.Data;
 import ma.plutus.vehicle_routing.utils.DrivingTimeCalculator;
 import ma.plutus.vehicle_routing.utils.HaversineDrivingTimeCalculator;
 
 
+
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @PlanningSolution
 public class VehicleRouteSolution {
