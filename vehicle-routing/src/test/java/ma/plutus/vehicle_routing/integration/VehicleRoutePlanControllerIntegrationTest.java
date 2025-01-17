@@ -25,28 +25,10 @@ import ma.plutus.vehicle_routing.dto.Visit;
 
 
 @Slf4j
-@AutoConfigureMockMvc
-@EnabledInNativeImage
 public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTest{
 
 
-
-    private final MockMvc mockMvc ;
-
-    private final ObjectMapper objectMapper ;
-
     private static final ThreadLocal<String> sharedResponse = new ThreadLocal<>();
-
-
-    @Autowired
-    VehicleRoutePlanControllerIntegrationTest(
-        MockMvc mockMvc ,
-        ObjectMapper objectMapper
-    ) {
-        this.mockMvc = mockMvc ;
-
-        this.objectMapper = objectMapper ;
-    }
 
 
 
@@ -58,23 +40,23 @@ public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTe
         Location vehicleHomeLocation = new Location(40.605994321126936, -75.68106859680056);
         Location visitLocation = new Location(40.397480680074565, -76.05412711128848);
 
-        // Create Visit object
-        Visit visit = new Visit();
-        visit.setId("1");
-        visit.setName("Hugo Rye");
-        visit.setLocation(visitLocation);
-        visit.setDemand(2);
-        visit.setMinStartTime(LocalDateTime.of(2025, 1, 16, 8, 0));
-        visit.setMaxEndTime(LocalDateTime.of(2025, 1, 16, 12, 0));
-        visit.setServiceDuration(Duration.ofSeconds(1800));
+    Visit visit = Visit.builder()
+            .id("1")
+            .name("Hugo Rye")
+            .location(visitLocation)
+            .demand(2)
+            .minStartTime(LocalDateTime.of(2025, 1, 16, 8, 0))
+            .maxEndTime(LocalDateTime.of(2025, 1, 16, 12, 0))
+            .serviceDuration(Duration.ofSeconds(1800))
+            .build();
 
-        // Create Vehicle object
-        Vehicle vehicle = new Vehicle();
-        vehicle.setId("1");
-        vehicle.setCapacity(15);
-        vehicle.setHomeLocation(vehicleHomeLocation);
-        vehicle.setDepartureTime(LocalDateTime.of(2025, 1, 16, 7, 30));
-        vehicle.setVisits(Collections.emptyList()); // Empty visits initially
+    Vehicle vehicle = Vehicle.builder()
+            .id("1")
+            .capacity(15)
+            .homeLocation(vehicleHomeLocation)
+            .departureTime(LocalDateTime.of(2025, 1, 16, 7, 30))
+            .visits(Collections.emptyList()) // Empty list
+            .build();
 
         // Create VehicleRouteSolution object
         VehicleRouteSolution vehicleRouteSolution = new VehicleRouteSolution();
