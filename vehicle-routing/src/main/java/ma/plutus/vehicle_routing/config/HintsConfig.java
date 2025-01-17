@@ -4,11 +4,10 @@ import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;
 import org.springframework.aot.hint.TypeReference;
 
-import java.util.List;
-
-import org.springframework.aot.hint.ExecutableMode;
 import org.springframework.aot.hint.MemberCategory;
 
+import ma.plutus.vehicle_routing.VehicleRoutingApplication;
+import ma.plutus.vehicle_routing.constraints.VehicleConstraintProvider;
 import ma.plutus.vehicle_routing.dto.Visit;
 
 
@@ -42,6 +41,28 @@ public class HintsConfig implements RuntimeHintsRegistrar{
             TypeReference.of("org.springframework.test.context.ContextConfiguration"),
             MemberCategory.values()
         );
+
+        /**
+         * 
+         * 
+         * 
+         */
+
+
+        hints.reflection().registerType(
+            VehicleConstraintProvider.class ,
+            MemberCategory.values()
+        ) ;
+
+        /**
+         * 
+         * 
+         */
+
+         hints.reflection().registerType(
+            VehicleRoutingApplication.class ,
+            MemberCategory.values()
+        ) ;
     }
     
 }
