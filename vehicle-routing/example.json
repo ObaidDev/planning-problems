@@ -1,0 +1,49 @@
+{
+    "name": "demo",
+    "southWestCorner": [
+        39.7656099067391,
+        -76.83782328143754
+    ],
+    "northEastCorner": [
+        40.77636644354855,
+        -74.9300739430771
+    ],
+    "startDateTime": "2025-01-18T07:30:00",
+    "endDateTime": "2025-01-19T00:00:00",
+    "vehicles": [
+        {
+            "id": "1",
+            "capacity": 15,
+            "homeLocation": [
+                40.605994321126936,
+                -75.68106859680056
+            ],
+            "departureTime": "2025-01-18T07:30:00",
+            "visits": [],
+            "totalDrivingTimeSeconds": 0,
+            "totalDemand": 0,
+            "arrivalTime": "2025-01-18T07:30:00"
+        }
+    ],
+    "visits": [
+        {
+            "id": "1",
+            "name": "Hugo Rye",
+            "location": [
+                40.397480680074565,
+                -76.05412711128848
+            ],
+            "demand": 2,
+            "minStartTime": "2025-01-18T08:00:00",
+            "maxEndTime": "2025-01-18T12:00:00",
+            "serviceDuration": 1800,
+            "vehicle": null,
+            "previousVisit": null,
+            "arrivalTime": null,
+            "departureTime": null,
+            "startServiceTime": null,
+            "drivingTimeSecondsFromPreviousStandstill": null
+        }
+    ],
+    "totalDrivingTimeSeconds": 0
+}
