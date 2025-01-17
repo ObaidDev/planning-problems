@@ -8,7 +8,11 @@ import java.util.List;
 import ai.timefold.solver.core.api.domain.entity.PlanningEntity;
 import ai.timefold.solver.core.api.domain.lookup.PlanningId;
 import ai.timefold.solver.core.api.domain.variable.PlanningListVariable;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -17,22 +21,36 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 
-@Data
 @JsonIdentityInfo(scope = Vehicle.class, generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @PlanningEntity
+@Builder
+@AllArgsConstructor
+@Schema(description = "Represents a vehicle used in the route plan.")
 public class Vehicle implements LocationAware {
+
 
     @PlanningId
     private String id;
+
+
+    @Schema(description = "The capacity of the vehicle.", example = "15")
     private int capacity;
+
+
+    @Schema(description = "The home location of the vehicle.", example = "[40.605994321126936, -75.68106859680056]")
     @JsonIdentityReference
     private Location homeLocation;
 
+
+    @Schema(description = "The departure time of the vehicle.", example = "2025-01-18T07:30:00")
     private LocalDateTime departureTime;
 
+
+    @Schema(description = "The list of visits assigned to the vehicle 'empty list'." , example = "[]")
     @JsonIdentityReference(alwaysAsId = true)
     @PlanningListVariable
     private List<Visit> visits;
+
 
     public Vehicle() {
     }

@@ -7,10 +7,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
+@Schema(description = "Represents a geographical location with latitude and longitude.")
 public class Location {
 
+    @Schema(description = "The latitude of the location.", example = "40.605994321126936")
     private double latitude;
+
+    @Schema(description = "The longitude of the location.", example = "-75.68106859680056")
     private double longitude;
 
     @JsonIgnore

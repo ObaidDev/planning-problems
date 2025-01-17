@@ -9,7 +9,9 @@ import ai.timefold.solver.core.api.domain.lookup.PlanningId;
 import ai.timefold.solver.core.api.domain.variable.CascadingUpdateShadowVariable;
 import ai.timefold.solver.core.api.domain.variable.InverseRelationShadowVariable;
 import ai.timefold.solver.core.api.domain.variable.PreviousElementShadowVariable;
-import lombok.Data;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -17,26 +19,45 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-@Data
 @JsonIdentityInfo(scope = Visit.class, generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @PlanningEntity
+@Builder
+@AllArgsConstructor
+@Schema(description = "Represents a visit in the route plan.")
 public class Visit implements LocationAware {
 
     @PlanningId
     private String id;
+
+    @Schema(description = "The name of the visit.", example = "Hugo Rye")
     private String name;
+
+    @Schema(description = "The location of the visit.", example = "[40.397480680074565, -76.05412711128848]")
     private Location location;
+
+    @Schema(description = "The demand of the visit.", example = "2")
     private int demand;
+
+    @Schema(description = "The earliest time the visit can start.", example = "2025-01-18T08:00:00")
     private LocalDateTime minStartTime;
+
+    @Schema(description = "The latest time the visit must end.", example = "2025-01-18T12:00:00")
     private LocalDateTime maxEndTime;
+
+    @Schema(description = "The duration of the service at the visit in seconds.", example = "1800")
     private Duration serviceDuration;
 
+    @Schema(description = "The vehicle assigned to this visit. The initial value is null." , example = "null")
     @JsonIdentityReference(alwaysAsId = true)
     @InverseRelationShadowVariable(sourceVariableName = "visits")
     private Vehicle vehicle;
+
+    @Schema(description = "The previous visit in the sequence. The initial value is null." ,example = "null")
     @JsonIdentityReference(alwaysAsId = true)
     @PreviousElementShadowVariable(sourceVariableName = "visits")
     private Visit previousVisit;
+
+    @Schema(description = "The arrival time at the visit. The initial value is null." , example = "null")
     @CascadingUpdateShadowVariable(targetMethodName = "updateArrivalTime")
     private LocalDateTime arrivalTime;
 
