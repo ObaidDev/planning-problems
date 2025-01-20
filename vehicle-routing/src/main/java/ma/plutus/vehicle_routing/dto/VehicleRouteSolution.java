@@ -20,7 +20,10 @@ import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import ma.plutus.vehicle_routing.utils.DrivingTimeCalculator;
 import ma.plutus.vehicle_routing.utils.HaversineDrivingTimeCalculator;
 
@@ -29,6 +32,8 @@ import ma.plutus.vehicle_routing.utils.HaversineDrivingTimeCalculator;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @PlanningSolution
+@Builder
+@AllArgsConstructor
 @Schema(description = "Represents the route solution for vehicles and visits.")
 public class VehicleRouteSolution {
 

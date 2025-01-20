@@ -8,8 +8,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
+@Builder
+@AllArgsConstructor
 @Schema(description = "Represents a geographical location with latitude and longitude.")
 public class Location {
 
