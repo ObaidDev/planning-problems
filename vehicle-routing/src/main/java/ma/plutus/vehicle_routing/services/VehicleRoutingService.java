@@ -20,6 +20,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.websocket.server.PathParam;
 import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
+import ma.plutus.vehicle_routing.exception.RoutePlanNotFoundException;
 import ma.plutus.vehicle_routing.utils.TTLConcurrentMap;
 
 
@@ -114,10 +115,10 @@ public class VehicleRoutingService {
     private VehicleRouteSolution getRoutePlanAndCheckForExceptions(String jobId) throws Exception {
         Job job = jobIdToJob.get(jobId);
         if (job == null) {
-            throw new Exception("No route plan found.");
+            throw new RoutePlanNotFoundException("No route plan found.");
         }
         if (job.exception != null) {
-            throw new Exception(job.exception);
+            throw new RoutePlanNotFoundException(job.exception.getMessage());
         }
         return job.routePlan;
     }
