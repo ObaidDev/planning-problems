@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
@@ -18,9 +19,11 @@ import lombok.Builder;
 public class Location {
 
     @Schema(description = "The latitude of the location.", example = "40.605994321126936")
+    @NotNull(message = "Latitude must not be null")
     private double latitude;
 
     @Schema(description = "The longitude of the location.", example = "-75.68106859680056")
+    @NotNull(message = "Longitude must not be null")
     private double longitude;
 
     @JsonIgnore

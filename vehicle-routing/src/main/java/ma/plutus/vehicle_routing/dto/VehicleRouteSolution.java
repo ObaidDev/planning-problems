@@ -15,6 +15,7 @@ import ai.timefold.solver.core.api.domain.valuerange.ValueRangeProvider;
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.solver.SolverStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
@@ -23,7 +24,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import ma.plutus.vehicle_routing.utils.DrivingTimeCalculator;
 import ma.plutus.vehicle_routing.utils.HaversineDrivingTimeCalculator;
 
@@ -38,6 +38,7 @@ import ma.plutus.vehicle_routing.utils.HaversineDrivingTimeCalculator;
 public class VehicleRouteSolution {
 
     @Schema(description = "The name of the route plan.", example = "demo")
+    @NotNull(message = "Name cannot be null")
     @NotBlank(message = "Name cannot be blank")
     private String name;
 
@@ -48,19 +49,20 @@ public class VehicleRouteSolution {
 
     @Schema(description = "The start date and time of the plan.", example = "2025-01-18T07:30:00")
     @NotNull(message = "Start date and time is required")
-    @FutureOrPresent(message = "Start date and time must be in the present or future")
+    // @FutureOrPresent(message = "Start date and time must be in the present or future")
     private LocalDateTime startDateTime;
 
 
     @Schema(description = "The end date and time of the plan.", example = "2025-01-19T00:00:00")
     @NotNull(message = "End date and time is required") 
-    @Future(message = "End date and time must be in the future")
+    // @Future(message = "End date and time must be in the future")
     private LocalDateTime endDateTime;
 
 
 
     @Schema(description = "The list of vehicles in the plan.")
     @NotEmpty(message = "There must be at least one vehicle")
+    @Valid
     @PlanningEntityCollectionProperty
     private List<Vehicle> vehicles ;
 

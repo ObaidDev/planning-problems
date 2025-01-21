@@ -10,6 +10,9 @@ import ai.timefold.solver.core.api.domain.variable.CascadingUpdateShadowVariable
 import ai.timefold.solver.core.api.domain.variable.InverseRelationShadowVariable;
 import ai.timefold.solver.core.api.domain.variable.PreviousElementShadowVariable;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
@@ -30,21 +33,30 @@ public class Visit implements LocationAware {
     private String id;
 
     @Schema(description = "The name of the visit.", example = "Hugo Rye")
+    @NotNull(message = "Name must not be null")
+    @NotBlank(message = "Name must not be blank")
     private String name;
 
     @Schema(description = "The location of the visit.", example = "[40.397480680074565, -76.05412711128848]")
+    @NotNull(message = "The location of the visit must not be null")
     private Location location;
 
     @Schema(description = "The demand of the visit.", example = "2")
+    @NotNull(message = "Capacity not null.")
+    @Min(message = "Capactity must be equal or greater than 2" , value = 2)
     private int demand;
 
     @Schema(description = "The earliest time the visit can start.", example = "2025-01-18T08:00:00")
+    @NotNull(message = "The minStartTime of the visit must not be null")
     private LocalDateTime minStartTime;
 
     @Schema(description = "The latest time the visit must end.", example = "2025-01-18T12:00:00")
+    @NotNull(message = "The maxEndTime of the visit must not be null")
     private LocalDateTime maxEndTime;
 
     @Schema(description = "The duration of the service at the visit in seconds.", example = "1800")
+    @NotNull(message = "The serviceDuration of the visit must not be null")
+    @Min(message = "The serviceDuration of the visit must be greater than 1200 (20min)" , value = 1200)
     private Duration serviceDuration;
 
     @Schema(description = "The vehicle assigned to this visit. The initial value is null." , example = "null")

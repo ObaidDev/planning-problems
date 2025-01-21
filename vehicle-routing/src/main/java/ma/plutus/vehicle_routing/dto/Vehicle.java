@@ -9,10 +9,14 @@ import ai.timefold.solver.core.api.domain.entity.PlanningEntity;
 import ai.timefold.solver.core.api.domain.lookup.PlanningId;
 import ai.timefold.solver.core.api.domain.variable.PlanningListVariable;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ma.plutus.vehicle_routing.annotations.EmptyList;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -34,20 +38,25 @@ public class Vehicle implements LocationAware {
 
 
     @Schema(description = "The capacity of the vehicle.", example = "15")
+    @NotNull(message = "Capacity not null.")
+    @Min(message = "Capactity must be equal or greater than 5" , value = 5)
     private int capacity;
 
 
     @Schema(description = "The home location of the vehicle.", example = "[40.605994321126936, -75.68106859680056]")
     @JsonIdentityReference
+    @NotNull(message = "Home location must not be null.")
     private Location homeLocation;
 
 
     @Schema(description = "The departure time of the vehicle.", example = "2025-01-18T07:30:00")
+    @NotNull(message = "The departure time of the vehicle must not be null")
     private LocalDateTime departureTime;
 
 
     @Schema(description = "The list of visits assigned to the vehicle 'empty list'." , example = "[]")
     @JsonIdentityReference(alwaysAsId = true)
+    @EmptyList(message = "The list of visits must be empty list")
     @PlanningListVariable
     private List<Visit> visits;
 
