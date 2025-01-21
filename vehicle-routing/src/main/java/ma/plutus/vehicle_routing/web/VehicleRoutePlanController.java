@@ -1,7 +1,12 @@
 package ma.plutus.vehicle_routing.web;
 
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.ErrorResponse;
 import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
@@ -65,7 +72,7 @@ public class VehicleRoutePlanController {
             schema = @Schema(implementation = ErrorResponse.class) // Use the ErrorResponse schema
         )
     )
-    public String solve(
+    public ResponseEntity<Map<String,Object>> solve(
         @Parameter(
             description = "Vehicle routing problem to be solved",
             required = true,
@@ -74,13 +81,21 @@ public class VehicleRoutePlanController {
                 schema = @Schema(implementation = VehicleRouteSolution.class) // Use the VehicleRouteSolution schema
             )
         )
-        @RequestBody VehicleRouteSolution problem
+        @RequestBody @Valid VehicleRouteSolution problem
     ) {
-        return vehicleRoutingService.solve(problem) ;
+
+        String planingID = vehicleRoutingService.solve(problem) ;
+
+        return new ResponseEntity<> (
+            Map.of(
+                "planingID" , planingID
+            ),
+            HttpStatus.CREATED
+        ) ;
     }
 
 
-    @GetMapping("/{jobId}")
+    @GetMapping("/{planingID}")
     @Operation(
         summary = "Get vehicle routing solution by job ID",
         description = "Retrieves the vehicle routing solution for a specific job ID. The job ID is generated when a problem is submitted for solving."
@@ -109,16 +124,19 @@ public class VehicleRoutePlanController {
             schema = @Schema(implementation = ErrorResponse.class) // Use the ErrorResponse schema
         )
     )
-    public VehicleRouteSolution getRouteSolution(
+    public ResponseEntity<VehicleRouteSolution> getRouteSolution(
         @Parameter(
             description = "The ID of the job for which the solution is to be retrieved",
             required = true,
             example = "job123"
         )
-        @PathVariable String jobId
+        @PathVariable String planingID
     ) throws Exception {
 
-        return vehicleRoutingService.getRoutePlan(jobId) ;
+        return new ResponseEntity<> (
+            vehicleRoutingService.getRoutePlan(planingID) ,
+            HttpStatus.OK
+        ) ;
     }
 
 
