@@ -35,42 +35,7 @@ public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTe
     @Test
     public void testPostAPlan() throws Exception {
 
-        Location southWestCorner = new Location(39.7656099067391, -76.83782328143754);
-        Location northEastCorner = new Location(40.77636644354855, -74.9300739430771);
-        Location vehicleHomeLocation = new Location(40.605994321126936, -75.68106859680056);
-        Location visitLocation = new Location(40.397480680074565, -76.05412711128848);
-
-    Visit visit = Visit.builder()
-            .id("1")
-            .name("Hugo Rye")
-            .location(visitLocation)
-            .demand(2)
-            .minStartTime(LocalDateTime.of(2025, 1, 16, 8, 0))
-            .maxEndTime(LocalDateTime.of(2025, 1, 16, 12, 0))
-            .serviceDuration(Duration.ofSeconds(1800))
-            .build();
-
-    Vehicle vehicle = Vehicle.builder()
-            .id("1")
-            .capacity(15)
-            .homeLocation(vehicleHomeLocation)
-            .departureTime(LocalDateTime.of(2025, 1, 16, 7, 30))
-            .visits(Collections.emptyList()) // Empty list
-            .build();
-
-        // Create VehicleRouteSolution object
-        VehicleRouteSolution vehicleRouteSolution = new VehicleRouteSolution();
-        vehicleRouteSolution.setName("demo");
-        vehicleRouteSolution.setSouthWestCorner(southWestCorner);
-        vehicleRouteSolution.setNorthEastCorner(northEastCorner);
-        vehicleRouteSolution.setStartDateTime(LocalDateTime.of(2025, 1, 16, 7, 30));
-        vehicleRouteSolution.setEndDateTime(LocalDateTime.of(2025, 1, 17, 0, 0));
-        vehicleRouteSolution.setVehicles(List.of(vehicle));
-        vehicleRouteSolution.setVisits(List.of(visit));
-
-        String jsonPayload = objectMapper.writeValueAsString(vehicleRouteSolution);
-
-
+        String jsonPayload = objectMapper.writeValueAsString(createValidVehicleRouteSolution());
 
         /**
          * Post vehicleRoutePlan
@@ -104,6 +69,73 @@ public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTe
         )
         .andExpect(MockMvcResultMatchers.status().isOk())
         .andExpect(MockMvcResultMatchers.jsonPath("name").value("demo"));
+    }
+
+
+
+    @Test
+    public void testPostAPlan_InvalidInput_MissingName() throws Exception {
+
+        VehicleRouteSolution invalidInput = createValidVehicleRouteSolution();
+        invalidInput.setName(null) ;
+
+        String jsonPayload = objectMapper.writeValueAsString(invalidInput);
+
+        // Act & Assert
+        mockMvc.perform(
+                MockMvcRequestBuilders.post("/routing/solve")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(jsonPayload)
+                )
+                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.status").value(false))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("Validation failed"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.errors[0].field").value("name"))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.errors[0].message").value("Name cannot be null"));
+    }
+
+
+
+
+
+
+
+
+
+    private VehicleRouteSolution createValidVehicleRouteSolution() {
+        Location southWestCorner = new Location(39.7656099067391, -76.83782328143754);
+        Location northEastCorner = new Location(40.77636644354855, -74.9300739430771);
+        Location vehicleHomeLocation = new Location(40.605994321126936, -75.68106859680056);
+        Location visitLocation = new Location(40.397480680074565, -76.05412711128848);
+
+        Visit visit = Visit.builder()
+                .id("1")
+                .name("Hugo Rye")
+                .location(visitLocation)
+                .demand(2)
+                .minStartTime(LocalDateTime.of(2025, 1, 16, 8, 0))
+                .maxEndTime(LocalDateTime.of(2025, 1, 16, 12, 0))
+                .serviceDuration(Duration.ofSeconds(1800))
+                .build();
+
+        Vehicle vehicle = Vehicle.builder()
+                .id("1")
+                .capacity(15)
+                .homeLocation(vehicleHomeLocation)
+                .departureTime(LocalDateTime.of(2025, 1, 16, 7, 30))
+                .visits(Collections.emptyList()) // Empty list
+                .build();
+
+        VehicleRouteSolution vehicleRouteSolution = new VehicleRouteSolution();
+        vehicleRouteSolution.setName("demo");
+        vehicleRouteSolution.setSouthWestCorner(southWestCorner);
+        vehicleRouteSolution.setNorthEastCorner(northEastCorner);
+        vehicleRouteSolution.setStartDateTime(LocalDateTime.of(2025, 1, 16, 7, 30));
+        vehicleRouteSolution.setEndDateTime(LocalDateTime.of(2025, 1, 17, 0, 0));
+        vehicleRouteSolution.setVehicles(List.of(vehicle));
+        vehicleRouteSolution.setVisits(List.of(visit));
+
+        return vehicleRouteSolution;
     }
     
 }
