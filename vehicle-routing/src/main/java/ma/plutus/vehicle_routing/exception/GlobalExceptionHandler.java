@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import io.swagger.v3.oas.annotations.Hidden;
-import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.ErrorResponse;
-import ma.plutus.vehicle_routing.dto.ErrorResponse.ErrorDetail;
 
 
 @Slf4j
@@ -67,14 +65,4 @@ public class GlobalExceptionHandler {
 
     }
 
-
-
-
-
-
-    private String extractSimpleFieldName(String propertyPath) {
-        String[] parts = propertyPath.split("\\.");
-        return parts[parts.length - 1];
-    }
-    
 }

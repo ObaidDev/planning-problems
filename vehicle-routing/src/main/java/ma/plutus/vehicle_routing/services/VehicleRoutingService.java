@@ -1,23 +1,16 @@
 package ma.plutus.vehicle_routing.services;
 
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import ai.timefold.solver.core.api.score.ScoreExplanation;
-import ai.timefold.solver.core.api.score.buildin.hardsoft.HardSoftScore;
+
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.solver.SolutionManager;
-import ai.timefold.solver.core.api.solver.Solver;
 import ai.timefold.solver.core.api.solver.SolverManager;
 import ai.timefold.solver.core.api.solver.SolverStatus;
-import ai.timefold.solver.core.config.solver.termination.TerminationConfig;
-import io.swagger.v3.oas.annotations.Parameter;
-import jakarta.websocket.server.PathParam;
 import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
 import ma.plutus.vehicle_routing.exception.RoutePlanNotFoundException;
