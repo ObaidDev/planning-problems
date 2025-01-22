@@ -9,6 +9,7 @@ import org.springframework.aot.hint.MemberCategory;
 import ma.plutus.vehicle_routing.VehicleRoutingApplication;
 import ma.plutus.vehicle_routing.constraints.VehicleConstraintProvider;
 import ma.plutus.vehicle_routing.dto.Visit;
+import ma.plutus.vehicle_routing.validators.EmptyListValidator ;
 
 
 
@@ -59,8 +60,19 @@ public class HintsConfig implements RuntimeHintsRegistrar{
          * 
          */
 
-         hints.reflection().registerType(
+        hints.reflection().registerType(
             VehicleRoutingApplication.class ,
+            MemberCategory.values()
+        ) ;
+
+
+        /***
+         * 
+         * register EmptyListValidator methods
+         */
+
+        hints.reflection().registerType(
+            EmptyListValidator.class ,
             MemberCategory.values()
         ) ;
     }
