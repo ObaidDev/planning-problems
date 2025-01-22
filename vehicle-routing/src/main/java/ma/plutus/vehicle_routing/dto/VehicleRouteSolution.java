@@ -42,10 +42,6 @@ public class VehicleRouteSolution {
     @NotBlank(message = "Name cannot be blank")
     private String name;
 
-    private Location southWestCorner;
-
-    private Location northEastCorner;
-
 
     @Schema(description = "The start date and time of the plan.", example = "2025-01-18T07:30:00")
     @NotNull(message = "Start date and time is required")
@@ -111,15 +107,11 @@ public class VehicleRouteSolution {
 
     @JsonCreator
     public VehicleRouteSolution(@JsonProperty("name") String name,
-            @JsonProperty("southWestCorner") Location southWestCorner,
-            @JsonProperty("northEastCorner") Location northEastCorner,
             @JsonProperty("startDateTime") LocalDateTime startDateTime,
             @JsonProperty("endDateTime") LocalDateTime endDateTime,
             @JsonProperty("vehicles") List<Vehicle> vehicles,
             @JsonProperty("visits") List<Visit> visits) {
         this.name = name;
-        this.southWestCorner = southWestCorner;
-        this.northEastCorner = northEastCorner;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.vehicles = vehicles;
@@ -134,14 +126,6 @@ public class VehicleRouteSolution {
 
     public String getName() {
         return name;
-    }
-
-    public Location getSouthWestCorner() {
-        return southWestCorner;
-    }
-
-    public Location getNorthEastCorner() {
-        return northEastCorner;
     }
 
     public LocalDateTime getStartDateTime() {
