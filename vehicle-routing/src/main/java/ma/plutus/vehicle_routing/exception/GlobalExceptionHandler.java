@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
         log.error("NoRoutePlanFoundException: {}", ex.getMessage());
 
         ErrorResponse.ErrorDetail errorDetail = new ErrorResponse.ErrorDetail();
-        errorDetail.setField("general"); // Default field
+        errorDetail.setField("general") ;
         errorDetail.setMessage(ex.getMessage());
 
         // Create the error response

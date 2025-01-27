@@ -1,14 +1,18 @@
 package ma.plutus.vehicle_routing.constraints;
 
+
 import org.jspecify.annotations.NonNull;
 
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.score.stream.Constraint;
 import ai.timefold.solver.core.api.score.stream.ConstraintFactory;
 import ai.timefold.solver.core.api.score.stream.ConstraintProvider;
+import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.Vehicle;
 import ma.plutus.vehicle_routing.dto.Visit;
 
+
+@Slf4j
 public class VehicleConstraintProvider implements ConstraintProvider{
 
 
@@ -18,11 +22,16 @@ public class VehicleConstraintProvider implements ConstraintProvider{
 
     @Override
     public Constraint @NonNull [] defineConstraints(@NonNull ConstraintFactory factory) {
-        return new Constraint[] {
+
+        Constraint[] constraints =  new Constraint[] {
             vehicleCapacity(factory),
             serviceFinishedAfterMaxEndTime(factory),
             minimizeTravelTime(factory)
         };
+
+        log.debug("constraints : {}" , constraints);
+
+        return constraints ;
     }
 
 
