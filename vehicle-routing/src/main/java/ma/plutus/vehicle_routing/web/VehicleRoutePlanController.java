@@ -1,11 +1,12 @@
 package ma.plutus.vehicle_routing.web;
 
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
+import ma.plutus.vehicle_routing.dto.ConstraintWeightOverrideDto;
 import ma.plutus.vehicle_routing.dto.ErrorResponse;
 import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
 import ma.plutus.vehicle_routing.services.VehicleRoutingService;
@@ -144,15 +146,20 @@ public class VehicleRoutePlanController {
 
 
     @PutMapping("/{planingID}")
-    public ResponseEntity updateConstraintsWeight (
+    public ResponseEntity<Map<String,Object>> updateConstraintsWeight (
 
-        @PathVariable String jobId , 
-        @RequestBody ConstraintWeightOverrides<HardSoftLongScore> constraintWeightOverrides
+        @PathVariable String planingID , 
+        @RequestBody List<ConstraintWeightOverrideDto> constraintWeightOverridesDtos
     ) {
 
-        vehicleRoutingService.overWriteConstraintsWeight(jobId, constraintWeightOverrides);
+        vehicleRoutingService.overWriteConstraintsWeight(planingID, constraintWeightOverridesDtos);
 
-        return new ResponseEntity<>(HttpStatus.OK) ;
+        return new ResponseEntity<>(
+            Map.of(
+                "message" , "Constraints Weights have just updated"
+            ) ,
+            HttpStatus.OK
+        ) ;
     }
 
 }

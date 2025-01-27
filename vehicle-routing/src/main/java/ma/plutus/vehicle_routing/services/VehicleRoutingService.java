@@ -1,5 +1,6 @@
 package ma.plutus.vehicle_routing.services;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,10 @@ import ai.timefold.solver.core.api.solver.SolutionManager;
 import ai.timefold.solver.core.api.solver.SolverManager;
 import ai.timefold.solver.core.api.solver.SolverStatus;
 import lombok.extern.slf4j.Slf4j;
+import ma.plutus.vehicle_routing.dto.ConstraintWeightOverrideDto;
 import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
 import ma.plutus.vehicle_routing.exception.RoutePlanNotFoundException;
+import ma.plutus.vehicle_routing.mappers.ConstraintsWeightMapper;
 import ma.plutus.vehicle_routing.utils.TTLConcurrentMap;
 
 
@@ -33,19 +36,21 @@ public class VehicleRoutingService {
     private static final int MAX_RECOMMENDED_FIT_LIST_SIZE = 5;
 
 
-    // private final ConcurrentMap<String, Job> jobIdToJob = new ConcurrentHashMap<>();
     private final TTLConcurrentMap<String, Job> jobIdToJob = new TTLConcurrentMap<>(120_00);
+
+    private final ConstraintsWeightMapper constraintsWeightMapper ;
     
 
     @Autowired
     VehicleRoutingService(
-        // Solver<VehicleRouteSolution> solver ,
+        ConstraintsWeightMapper constraintsWeightMapper ,
         SolutionManager<VehicleRouteSolution, HardSoftLongScore> solutionManager ,
         @Qualifier("solverManager30Seconds") SolverManager<VehicleRouteSolution, String> solverManager 
     ) {
-        // this.solver = solver ;
+
         this.solverManager = solverManager ;
         this.solutionManager = solutionManager ;
+        this.constraintsWeightMapper = constraintsWeightMapper ;
     }
 
 
@@ -55,9 +60,9 @@ public class VehicleRoutingService {
         jobIdToJob.put(jobId, Job.ofRoutePlan(problem));
         solverManager.solveBuilder()
                 .withProblemId(jobId)
-                .withProblemFinder(jobId_ -> jobIdToJob.get(jobId).routePlan)
+                .withProblemFinder(joBId -> jobIdToJob.get(jobId).routePlan)
                 .withBestSolutionConsumer(solution -> jobIdToJob.put(jobId, Job.ofRoutePlan(solution)))
-                .withExceptionHandler((jobId_, exception) -> {
+                .withExceptionHandler((joBId, exception) -> {
                     jobIdToJob.put(jobId, Job.ofException(exception));
                     log.error("Failed solving jobId ({}).", jobId, exception);
                 })
@@ -75,10 +80,13 @@ public class VehicleRoutingService {
     }
 
 
-    public void overWriteConstraintsWeight(String jobId , ConstraintWeightOverrides<HardSoftLongScore> constraintWeightOverrides) {
+    public void overWriteConstraintsWeight(String jobId , List<ConstraintWeightOverrideDto> constraintWeightOverridesDtos) {
 
         VehicleRouteSolution routePlan = getRoutePlanAndCheckForExceptions(jobId);
-        routePlan.setConstraintWeightOverrides(constraintWeightOverrides);
+
+        routePlan.setConstraintWeightOverrides(
+        constraintsWeightMapper.toConstraintWeightOverrides(constraintWeightOverridesDtos)
+        );
     }
 
 
