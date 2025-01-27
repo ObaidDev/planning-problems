@@ -2,16 +2,19 @@ package ma.plutus.vehicle_routing.dto;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import ai.timefold.solver.core.api.domain.solution.ConstraintWeightOverrides;
 import ai.timefold.solver.core.api.domain.solution.PlanningEntityCollectionProperty;
 import ai.timefold.solver.core.api.domain.solution.PlanningScore;
 import ai.timefold.solver.core.api.domain.solution.PlanningSolution;
 import ai.timefold.solver.core.api.domain.valuerange.ValueRangeProvider;
+import ai.timefold.solver.core.api.score.buildin.hardsoft.HardSoftScore;
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.solver.SolverStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -93,6 +96,7 @@ public class VehicleRouteSolution {
     private String scoreExplanation;
 
 
+    private ConstraintWeightOverrides<HardSoftLongScore> constraintWeightOverrides;
 
     public VehicleRouteSolution() {
     }
@@ -120,6 +124,9 @@ public class VehicleRouteSolution {
 
         DrivingTimeCalculator drivingTimeCalculator = HaversineDrivingTimeCalculator.getInstance();
         drivingTimeCalculator.initDrivingTimeMaps(locations);
+
+        this.constraintWeightOverrides = ConstraintWeightOverrides.of(Map.of()) ;
+
     }
 
     public String getName() {

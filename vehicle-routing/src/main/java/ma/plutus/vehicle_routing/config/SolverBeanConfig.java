@@ -24,35 +24,6 @@ import ma.plutus.vehicle_routing.dto.Visit;
 @Configuration
 public class SolverBeanConfig {
 
-
-    // @Bean
-    // public Solver<VehicleRouteSolution> examSchedulingSolver() {
-
-    //     SolverConfig solverConfig = (new SolverConfig())
-    //         .withSolutionClass(VehicleRouteSolution.class)
-    //         .withEntityClassList(List.of(Vehicle.class, Visit.class))
-    //         .withConstraintProviderClass(VehicleConstraintProvider.class)
-    //         .withTerminationConfig(new TerminationConfig().withSecondsSpentLimit(30L));
-
-
-    //     SolverFactory<VehicleRouteSolution> solverFactory = SolverFactory.create(solverConfig);
-
-
-    //     return solverFactory.buildSolver();
-    // }
-
-
-    // @Bean
-    // public SolutionManager<VehicleRouteSolution, HardSoftLongScore> solutionManager() {
-    //     return SolutionManager.create(SolverFactory.create(new SolverConfig()
-    //         .withSolutionClass(VehicleRouteSolution.class)
-    //         .withEntityClassList(List.of(Vehicle.class, Visit.class))
-    //         .withConstraintProviderClass(VehicleConstraintProvider.class)
-    //     ));
-    // }
-
-
-
     @Bean("solverManager30Seconds")
     public SolverManager<VehicleRouteSolution, String> solverManager(SolverConfig solverConfig) {
 
@@ -69,7 +40,7 @@ public class SolverBeanConfig {
             .withEntityClassList(List.of(Vehicle.class, Visit.class))
             .withConstraintProviderClass(VehicleConstraintProvider.class)
             .withTerminationConfig(new TerminationConfig()
-                .withSecondsSpentLimit(30L) // Terminate after 30 seconds
+                .withSecondsSpentLimit(120L) // Terminate after 30 seconds
             );
     }
 }
