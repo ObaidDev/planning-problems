@@ -40,7 +40,7 @@ public class SolverBeanConfig {
             .withEntityClassList(List.of(Vehicle.class, Visit.class))
             .withConstraintProviderClass(VehicleConstraintProvider.class)
             .withTerminationConfig(new TerminationConfig()
-                .withSecondsSpentLimit(30L) // Terminate after 30 seconds
+                .withSecondsSpentLimit(120L) // Terminate after 30 seconds
             );
     }
 }
