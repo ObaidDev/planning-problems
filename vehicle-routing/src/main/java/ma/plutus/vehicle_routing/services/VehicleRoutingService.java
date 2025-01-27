@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-
+import ai.timefold.solver.core.api.domain.solution.ConstraintWeightOverrides;
 import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
 import ai.timefold.solver.core.api.solver.SolutionManager;
 import ai.timefold.solver.core.api.solver.SolverManager;
@@ -75,13 +75,11 @@ public class VehicleRoutingService {
     }
 
 
-    // public VehicleRouteSolution solveDirectly(VehicleRouteSolution problem) {
+    public void overWriteConstraintsWeight(String jobId , ConstraintWeightOverrides<HardSoftLongScore> constraintWeightOverrides) {
 
-    //     return solver.solve(problem) ;
-    // }
-
-
-
+        VehicleRouteSolution routePlan = getRoutePlanAndCheckForExceptions(jobId);
+        routePlan.setConstraintWeightOverrides(constraintWeightOverrides);
+    }
 
 
 
@@ -91,7 +89,9 @@ public class VehicleRoutingService {
 
 
 
-    private record Job(VehicleRouteSolution routePlan, Throwable exception) {
+
+
+    public record Job(VehicleRouteSolution routePlan, Throwable exception) {
 
         static Job ofRoutePlan(VehicleRouteSolution routePlan) {
             return new Job(routePlan, null);
@@ -105,7 +105,7 @@ public class VehicleRoutingService {
 
 
 
-    private VehicleRouteSolution getRoutePlanAndCheckForExceptions(String jobId) throws Exception {
+    private VehicleRouteSolution getRoutePlanAndCheckForExceptions(String jobId) {
         Job job = jobIdToJob.get(jobId);
         if (job == null) {
             throw new RoutePlanNotFoundException("No route plan found.");
