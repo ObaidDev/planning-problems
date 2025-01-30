@@ -26,7 +26,7 @@ public class ConstraintsWeightMapper {
 
         Map<String, HardSoftLongScore> constraintsMap = constraintWeights.stream()
         .collect(Collectors.toMap(
-            ConstraintWeightOverrideDto::getConstraintName,
+            constratin -> constratin.getConstraint().toString() ,
             constraintWeight -> {
 
                 if (constraintWeight.getType() == ConstraintTypes.SOFT) {

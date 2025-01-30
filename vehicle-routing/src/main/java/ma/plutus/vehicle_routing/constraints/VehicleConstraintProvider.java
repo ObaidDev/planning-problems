@@ -10,15 +10,12 @@ import ai.timefold.solver.core.api.score.stream.ConstraintProvider;
 import lombok.extern.slf4j.Slf4j;
 import ma.plutus.vehicle_routing.dto.Vehicle;
 import ma.plutus.vehicle_routing.dto.Visit;
+import ma.plutus.vehicle_routing.dto.ConstraintEnum;
 
 
 @Slf4j
 public class VehicleConstraintProvider implements ConstraintProvider{
 
-
-    public static final String VEHICLE_CAPACITY = "vehicleCapacity";
-    public static final String SERVICE_FINISHED_AFTER_MAX_END_TIME = "serviceFinishedAfterMaxEndTime";
-    public static final String MINIMIZE_TRAVEL_TIME = "minimizeTravelTime";
 
     @Override
     public Constraint @NonNull [] defineConstraints(@NonNull ConstraintFactory factory) {
@@ -42,7 +39,7 @@ public class VehicleConstraintProvider implements ConstraintProvider{
                 .filter(vehicle -> vehicle.getTotalDemand() > vehicle.getCapacity())
                 .penalizeLong(HardSoftLongScore.ONE_HARD,
                         vehicle -> vehicle.getTotalDemand() - vehicle.getCapacity())
-                .asConstraint(VEHICLE_CAPACITY);
+                .asConstraint(ConstraintEnum.VEHICLE_CAPACITY.toString());
     }
 
     protected Constraint serviceFinishedAfterMaxEndTime(ConstraintFactory factory) {
@@ -50,7 +47,7 @@ public class VehicleConstraintProvider implements ConstraintProvider{
                 .filter(Visit::isServiceFinishedAfterMaxEndTime)
                 .penalizeLong(HardSoftLongScore.ONE_HARD,
                         Visit::getServiceFinishedDelayInMinutes)
-                .asConstraint(SERVICE_FINISHED_AFTER_MAX_END_TIME);
+                .asConstraint(ConstraintEnum.SERVICE_FINISHED_AFTER_MAX_END_TIME.toString());
     }
 
 
@@ -60,7 +57,7 @@ public class VehicleConstraintProvider implements ConstraintProvider{
         return factory.forEach(Vehicle.class)
                 .penalizeLong(HardSoftLongScore.ONE_SOFT,
                         Vehicle::getTotalDrivingTimeSeconds)
-                .asConstraint(MINIMIZE_TRAVEL_TIME);
+                .asConstraint(ConstraintEnum.MINIMIZE_TRAVEL_TIME.toString());
     }
     
 }
