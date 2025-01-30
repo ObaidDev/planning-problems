@@ -25,7 +25,7 @@ import ma.plutus.vehicle_routing.dto.Visit;
 
 
 @Slf4j
-public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTest{
+class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTest{
 
 
     private static final ThreadLocal<String> sharedResponse = new ThreadLocal<>();
@@ -33,7 +33,7 @@ public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTe
 
 
     @Test
-    public void testPostAPlan() throws Exception {
+    void testPostAPlan() throws Exception {
 
         String jsonPayload = objectMapper.writeValueAsString(createValidVehicleRouteSolution());
 
@@ -80,7 +80,7 @@ public class VehicleRoutePlanControllerIntegrationTest extends BaseIntegrationTe
 
 
     @Test
-    public void testPostAPlan_InvalidInput_MissingName() throws Exception {
+    void testPostAPlan_InvalidInput_MissingName() throws Exception {
 
         VehicleRouteSolution invalidInput = createValidVehicleRouteSolution();
         invalidInput.setName(null) ;
