@@ -12,7 +12,7 @@ import ma.plutus.vehicle_routing.enums.ConstraintTypes;
 @Builder
 public class ConstraintWeightOverrideDto {
     
-    private String constraintName ;
+    private ConstraintEnum constraint ;
 
     private ConstraintTypes type ;
 
