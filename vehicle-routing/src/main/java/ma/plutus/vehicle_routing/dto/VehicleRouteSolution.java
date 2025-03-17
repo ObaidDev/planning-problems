@@ -95,7 +95,7 @@ public class VehicleRouteSolution {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String scoreExplanation;
 
-
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private ConstraintWeightOverrides<HardSoftLongScore> constraintWeightOverrides;
 
     public VehicleRouteSolution() {
@@ -124,8 +124,10 @@ public class VehicleRouteSolution {
 
         DrivingTimeCalculator drivingTimeCalculator = HaversineDrivingTimeCalculator.getInstance();
         drivingTimeCalculator.initDrivingTimeMaps(locations);
+        
 
-        this.constraintWeightOverrides = ConstraintWeightOverrides.of(Map.of()) ;
+        Map<String , HardSoftLongScore> initOverwightsMap = Map.of() ;
+        this.constraintWeightOverrides = ConstraintWeightOverrides.of(initOverwightsMap) ;
 
     }
 
