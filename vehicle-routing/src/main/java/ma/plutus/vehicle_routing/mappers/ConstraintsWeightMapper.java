@@ -21,7 +21,10 @@ public class ConstraintsWeightMapper {
     public ConstraintWeightOverrides<HardSoftLongScore> toConstraintWeightOverrides(List<ConstraintWeightOverrideDto> constraintWeights) {
 
         if (constraintWeights == null || constraintWeights.isEmpty()) {
-            return ConstraintWeightOverrides.of(Map.of()) ;
+
+            Map<String , HardSoftLongScore> initOverwightsMap = Map.of() ;
+            
+            return ConstraintWeightOverrides.of(initOverwightsMap) ;
         }
 
         Map<String, HardSoftLongScore> constraintsMap = constraintWeights.stream()
