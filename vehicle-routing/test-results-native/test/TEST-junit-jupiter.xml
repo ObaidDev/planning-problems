@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="3" skipped="0" failures="0" errors="0" time="0.192" hostname="localhost" timestamp="2025-01-22T15:34:03">
+<testsuite name="JUnit Jupiter" tests="3" skipped="0" failures="0" errors="0" time="0.31" hostname="DESKTOP-6S6EUQ6" timestamp="2025-03-17T15:29:46">
 <properties>
-<property name="APPLICATION_NAME" value="vehicle-routing"/>
 <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
 <property name="FILE_LOG_CHARSET" value="UTF-8"/>
 <property name="LOGGED_APPLICATION_NAME" value="[vehicle-routing] "/>
-<property name="PID" value="71831"/>
+<property name="PID" value="4396"/>
 <property name="file.encoding" value="UTF-8"/>
 <property name="file.separator" value="/"/>
 <property name="java.awt.headless" value="true"/>
@@ -41,22 +40,22 @@
 <property name="org.jboss.logging.provider" value="slf4j"/>
 <property name="os.arch" value="amd64"/>
 <property name="os.name" value="Linux"/>
-<property name="os.version" value="6.1.0-28-amd64"/>
+<property name="os.version" value="5.15.167.4-microsoft-standard-WSL2"/>
 <property name="path.separator" value=":"/>
 <property name="sun.arch.data.model" value="64"/>
 <property name="sun.jnu.encoding" value="UTF-8"/>
-<property name="user.dir" value="/home/plutus/Dev_Section/haha/planner/vehicle-routing"/>
+<property name="user.dir" value="/home/plutus/java/planning-problems/vehicle-routing"/>
 <property name="user.home" value="/home/plutus"/>
 <property name="user.name" value="plutus"/>
 <property name="user.timezone" value="Africa/Casablanca"/>
 </properties>
-<testcase name="testGetAPlan()" classname="ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest" time="0.002">
+<testcase name="testGetAPlan()" classname="ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest" time="0.003">
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest]/[method:testGetAPlan()]
 display-name: testGetAPlan()
 ]]></system-out>
 </testcase>
-<testcase name="testPostAPlan()" classname="ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest" time="0.009">
+<testcase name="testPostAPlan()" classname="ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest" time="0.017">
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:ma.plutus.vehicle_routing.integration.VehicleRoutePlanControllerIntegrationTest]/[method:testPostAPlan()]
 display-name: testPostAPlan()
