@@ -23,7 +23,7 @@ import ma.plutus.vehicle_routing.utils.TTLConcurrentMap;
 
 
 
-public class VehicleRoutingServiceTest {
+class VehicleRoutingServiceTest {
     
     @Mock
     private SolutionManager<VehicleRouteSolution, HardSoftLongScore> solutionManager;
