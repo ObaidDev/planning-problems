@@ -5,13 +5,10 @@ import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import ai.timefold.solver.core.api.score.ScoreManager;
-import ai.timefold.solver.core.api.score.buildin.hardsoft.HardSoftScore;
-import ai.timefold.solver.core.api.score.buildin.hardsoftlong.HardSoftLongScore;
-import ai.timefold.solver.core.api.solver.SolutionManager;
-import ai.timefold.solver.core.api.solver.Solver;
-import ai.timefold.solver.core.api.solver.SolverFactory;
+
 import ai.timefold.solver.core.api.solver.SolverManager;
+import ai.timefold.solver.core.config.constructionheuristic.ConstructionHeuristicPhaseConfig;
+import ai.timefold.solver.core.config.localsearch.LocalSearchPhaseConfig;
 import ai.timefold.solver.core.config.solver.SolverConfig;
 import ai.timefold.solver.core.config.solver.termination.TerminationConfig;
 import ma.plutus.vehicle_routing.constraints.VehicleConstraintProvider;
@@ -41,6 +38,22 @@ public class SolverBeanConfig {
             .withConstraintProviderClass(VehicleConstraintProvider.class)
             .withTerminationConfig(new TerminationConfig()
                 .withSecondsSpentLimit(120L) // Terminate after 30 seconds
+            )
+            .withPhases(
+
+                // Stage 1: Initial assignment with list variables
+                new ConstructionHeuristicPhaseConfig()  ,
+                
+                // Stage 2: Local Search - Visit sequencing
+                new LocalSearchPhaseConfig()
+                .withTerminationConfig(
+                    new TerminationConfig()
+                        .withSecondsSpentLimit(30L) 
+                ) ,
+
+                 // Stage 3: Local Search - Refinement
+                new LocalSearchPhaseConfig()
+
             );
     }
 }
