@@ -1,0 +1,1863 @@
+{
+  "name": "demo",
+  "southWestCorner": [
+    40.6971494,
+    -74.2598655
+  ],
+  "northEastCorner": [
+    40.897589,
+    -73.6995653
+  ],
+  "startDateTime": "2025-01-18T07:30:00",
+  "endDateTime": "2025-01-19T00:00:00",
+  "vehicles": [
+    {
+      "id": "1",
+      "capacity": 60,
+      "homeLocation": [
+        40.7431,
+        -73.810919
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "2",
+      "capacity": 60,
+      "homeLocation": [
+        40.701973,
+        -73.891095
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "3",
+      "capacity": 60,
+      "homeLocation": [
+        40.875037,
+        -73.769876
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "4",
+      "capacity": 60,
+      "homeLocation": [
+        40.79699,
+        -73.978496
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "5",
+      "capacity": 60,
+      "homeLocation": [
+        40.699737,
+        -74.094423
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "6",
+      "capacity": 60,
+      "homeLocation": [
+        40.865066,
+        -74.019826
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "7",
+      "capacity": 60,
+      "homeLocation": [
+        40.896244,
+        -73.854863
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "8",
+      "capacity": 60,
+      "homeLocation": [
+        40.760051,
+        -73.790149
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "9",
+      "capacity": 60,
+      "homeLocation": [
+        40.869542,
+        -74.16806
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "10",
+      "capacity": 60,
+      "homeLocation": [
+        40.70159,
+        -73.758113
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "11",
+      "capacity": 60,
+      "homeLocation": [
+        40.858773,
+        -74.004996
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "12",
+      "capacity": 60,
+      "homeLocation": [
+        40.744162,
+        -74.073779
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "13",
+      "capacity": 60,
+      "homeLocation": [
+        40.793072,
+        -73.769376
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "14",
+      "capacity": 60,
+      "homeLocation": [
+        40.775581,
+        -74.184034
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    },
+    {
+      "id": "15",
+      "capacity": 60,
+      "homeLocation": [
+        40.73005,
+        -73.70689
+      ],
+      "departureTime": "2025-01-18T07:30:00",
+      "visits": [],
+      "totalDrivingTimeSeconds": 0,
+      "totalDemand": 0,
+      "arrivalTime": "2025-01-18T07:30:00"
+    }
+  ],
+  "visits": [
+    {
+      "id": "13232221",
+      "location": [
+        40.801294,
+        -74.107041
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232222",
+      "location": [
+        40.791873,
+        -73.83831
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232223",
+      "location": [
+        40.702434,
+        -74.213093
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232224",
+      "location": [
+        40.875572,
+        -73.750777
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232225",
+      "location": [
+        40.811362,
+        -74.089829
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232226",
+      "location": [
+        40.882121,
+        -74.237147
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232227",
+      "location": [
+        40.729329,
+        -73.856602
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232228",
+      "location": [
+        40.896158,
+        -74.060252
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232229",
+      "location": [
+        40.840498,
+        -74.253103
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232230",
+      "location": [
+        40.809116,
+        -74.083632
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232231",
+      "location": [
+        40.867066,
+        -74.167313
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232232",
+      "location": [
+        40.815643,
+        -74.105336
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232233",
+      "location": [
+        40.833819,
+        -74.225855
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232234",
+      "location": [
+        40.731238,
+        -74.100652
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232235",
+      "location": [
+        40.884003,
+        -73.95076
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232236",
+      "location": [
+        40.870099,
+        -74.232587
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232237",
+      "location": [
+        40.870464,
+        -74.152843
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232238",
+      "location": [
+        40.790687,
+        -74.106458
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232239",
+      "location": [
+        40.831107,
+        -74.138039
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232240",
+      "location": [
+        40.744298,
+        -74.098086
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232241",
+      "location": [
+        40.729501,
+        -74.242585
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232242",
+      "location": [
+        40.723139,
+        -73.874634
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232243",
+      "location": [
+        40.879371,
+        -73.887065
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232244",
+      "location": [
+        40.896534,
+        -74.125618
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232245",
+      "location": [
+        40.86567,
+        -73.851305
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232246",
+      "location": [
+        40.805414,
+        -73.879664
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232247",
+      "location": [
+        40.841315,
+        -74.258658
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232248",
+      "location": [
+        40.83273,
+        -73.979438
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232249",
+      "location": [
+        40.806366,
+        -74.131169
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232250",
+      "location": [
+        40.780683,
+        -73.963521
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232251",
+      "location": [
+        40.834526,
+        -74.036376
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232252",
+      "location": [
+        40.834301,
+        -74.246353
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232253",
+      "location": [
+        40.796219,
+        -74.136946
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232254",
+      "location": [
+        40.798523,
+        -73.728055
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232255",
+      "location": [
+        40.735334,
+        -73.956936
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232256",
+      "location": [
+        40.738483,
+        -73.727881
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232257",
+      "location": [
+        40.702392,
+        -73.87185
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232258",
+      "location": [
+        40.707524,
+        -73.82481
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232259",
+      "location": [
+        40.844317,
+        -74.212645
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232260",
+      "location": [
+        40.776344,
+        -73.771418
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232261",
+      "location": [
+        40.874081,
+        -74.253292
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232262",
+      "location": [
+        40.799364,
+        -73.782125
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232263",
+      "location": [
+        40.739456,
+        -73.896943
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232264",
+      "location": [
+        40.747801,
+        -74.19421
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232265",
+      "location": [
+        40.744719,
+        -73.744947
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232266",
+      "location": [
+        40.761686,
+        -74.078043
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232267",
+      "location": [
+        40.790812,
+        -74.157986
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232268",
+      "location": [
+        40.770564,
+        -74.05558
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232269",
+      "location": [
+        40.890366,
+        -74.241098
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232270",
+      "location": [
+        40.697547,
+        -74.176201
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232271",
+      "location": [
+        40.836351,
+        -73.940343
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232272",
+      "location": [
+        40.838371,
+        -73.95447
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232273",
+      "location": [
+        40.801684,
+        -74.241007
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232274",
+      "location": [
+        40.793646,
+        -73.90724
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232275",
+      "location": [
+        40.824749,
+        -74.136371
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232276",
+      "location": [
+        40.817495,
+        -74.111651
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232277",
+      "location": [
+        40.785694,
+        -73.756255
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232278",
+      "location": [
+        40.890781,
+        -73.708514
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232279",
+      "location": [
+        40.728439,
+        -73.880778
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232280",
+      "location": [
+        40.805773,
+        -74.23411
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232281",
+      "location": [
+        40.772553,
+        -74.198881
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232282",
+      "location": [
+        40.87122,
+        -74.052266
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232283",
+      "location": [
+        40.897085,
+        -74.123248
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232284",
+      "location": [
+        40.770712,
+        -74.240643
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232285",
+      "location": [
+        40.794324,
+        -74.211812
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232286",
+      "location": [
+        40.715502,
+        -74.226573
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232287",
+      "location": [
+        40.806705,
+        -74.030815
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232288",
+      "location": [
+        40.846142,
+        -73.882006
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232289",
+      "location": [
+        40.769678,
+        -73.770906
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232290",
+      "location": [
+        40.838517,
+        -74.144927
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232291",
+      "location": [
+        40.869261,
+        -74.008531
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232292",
+      "location": [
+        40.835569,
+        -74.006622
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232293",
+      "location": [
+        40.816574,
+        -74.04422
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232294",
+      "location": [
+        40.769512,
+        -73.737255
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232295",
+      "location": [
+        40.75335,
+        -74.033606
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232296",
+      "location": [
+        40.774585,
+        -74.235968
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232297",
+      "location": [
+        40.872323,
+        -73.984655
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232298",
+      "location": [
+        40.789037,
+        -74.08536
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232299",
+      "location": [
+        40.806007,
+        -73.999593
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232300",
+      "location": [
+        40.718692,
+        -74.155759
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232301",
+      "location": [
+        40.701101,
+        -73.709231
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232302",
+      "location": [
+        40.741722,
+        -74.010512
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232303",
+      "location": [
+        40.801018,
+        -73.712052
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232304",
+      "location": [
+        40.883538,
+        -74.143232
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232305",
+      "location": [
+        40.702012,
+        -73.970232
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232306",
+      "location": [
+        40.819837,
+        -74.080311
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232307",
+      "location": [
+        40.730115,
+        -73.942134
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232308",
+      "location": [
+        40.779109,
+        -73.957446
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232309",
+      "location": [
+        40.758662,
+        -74.123084
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232310",
+      "location": [
+        40.779031,
+        -73.946763
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232311",
+      "location": [
+        40.806308,
+        -73.872958
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232312",
+      "location": [
+        40.716285,
+        -73.975101
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232313",
+      "location": [
+        40.70684,
+        -74.036694
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232314",
+      "location": [
+        40.705591,
+        -73.740432
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232315",
+      "location": [
+        40.728955,
+        -73.97445
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232316",
+      "location": [
+        40.810013,
+        -73.910361
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232317",
+      "location": [
+        40.825084,
+        -73.744706
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232318",
+      "location": [
+        40.84393,
+        -73.893887
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232319",
+      "location": [
+        40.817627,
+        -73.824096
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232320",
+      "location": [
+        40.786953,
+        -74.137213
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232321",
+      "location": [
+        40.845246,
+        -74.130236
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232322",
+      "location": [
+        40.83011,
+        -74.183138
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232323",
+      "location": [
+        40.766405,
+        -73.797539
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232324",
+      "location": [
+        40.796185,
+        -73.92257
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232325",
+      "location": [
+        40.737023,
+        -74.081336
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232326",
+      "location": [
+        40.865209,
+        -74.074453
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232327",
+      "location": [
+        40.812037,
+        -73.990926
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232328",
+      "location": [
+        40.743207,
+        -74.133139
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232329",
+      "location": [
+        40.805098,
+        -74.22776
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232330",
+      "location": [
+        40.762133,
+        -74.221546
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232331",
+      "location": [
+        40.78692,
+        -74.210114
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232332",
+      "location": [
+        40.840728,
+        -74.216978
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232333",
+      "location": [
+        40.786213,
+        -73.931304
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232334",
+      "location": [
+        40.877919,
+        -73.872286
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232335",
+      "location": [
+        40.718233,
+        -74.116828
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232336",
+      "location": [
+        40.803377,
+        -74.15006
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232337",
+      "location": [
+        40.709103,
+        -73.854612
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232338",
+      "location": [
+        40.802326,
+        -73.713361
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232339",
+      "location": [
+        40.735755,
+        -73.778277
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232340",
+      "location": [
+        40.725008,
+        -73.784179
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232341",
+      "location": [
+        40.794787,
+        -73.730471
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232342",
+      "location": [
+        40.817968,
+        -73.799513
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232343",
+      "location": [
+        40.782872,
+        -73.733696
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232344",
+      "location": [
+        40.762985,
+        -73.88117
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232345",
+      "location": [
+        40.878588,
+        -73.77966
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232346",
+      "location": [
+        40.817785,
+        -73.920571
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232347",
+      "location": [
+        40.761923,
+        -74.095581
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232348",
+      "location": [
+        40.71849,
+        -74.162551
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232349",
+      "location": [
+        40.798458,
+        -73.924305
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232350",
+      "location": [
+        40.769243,
+        -74.19232
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232351",
+      "location": [
+        40.808104,
+        -74.027701
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232352",
+      "location": [
+        40.768179,
+        -73.77712
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232353",
+      "location": [
+        40.885996,
+        -74.007124
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232354",
+      "location": [
+        40.714122,
+        -74.18031
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232355",
+      "location": [
+        40.897221,
+        -73.708438
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232356",
+      "location": [
+        40.699667,
+        -74.180518
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232357",
+      "location": [
+        40.875177,
+        -74.137037
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232358",
+      "location": [
+        40.894708,
+        -73.874417
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232359",
+      "location": [
+        40.824744,
+        -73.892174
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232360",
+      "location": [
+        40.821615,
+        -73.911077
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232361",
+      "location": [
+        40.756727,
+        -73.829309
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232362",
+      "location": [
+        40.885184,
+        -74.011859
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232363",
+      "location": [
+        40.766827,
+        -74.134422
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232364",
+      "location": [
+        40.771293,
+        -73.830623
+      ],
+      "demand": 7,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232365",
+      "location": [
+        40.861489,
+        -73.926926
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232366",
+      "location": [
+        40.779526,
+        -74.097583
+      ],
+      "demand": 5,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232367",
+      "location": [
+        40.747312,
+        -74.17746
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232368",
+      "location": [
+        40.840012,
+        -73.760443
+      ],
+      "demand": 8,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232369",
+      "location": [
+        40.867528,
+        -73.897039
+      ],
+      "demand": 4,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    },
+    {
+      "id": "13232370",
+      "location": [
+        40.747673,
+        -74.118021
+      ],
+      "demand": 6,
+      "minStartTime": "2025-01-18T07:30:00",
+      "maxEndTime": "2025-01-19T00:00:00",
+      "serviceDuration": 360
+    }
+  ],
+  "totalDrivingTimeSeconds": 0
+}

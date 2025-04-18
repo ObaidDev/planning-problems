@@ -8,7 +8,7 @@
 		<version>3.3.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ma.plutus</groupId>
+	<groupId>com.trackswiftly</groupId>
 	<artifactId>vehicle-routing</artifactId>
 	<version>0.0.1</version>
 	<name>vehicle-routing</name>

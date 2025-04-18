@@ -15,12 +15,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.jayway.jsonpath.JsonPath;
+import com.trackswiftly.vehicle_routing.dto.Location;
+import com.trackswiftly.vehicle_routing.dto.Vehicle;
+import com.trackswiftly.vehicle_routing.dto.VehicleRouteSolution;
+import com.trackswiftly.vehicle_routing.dto.Visit;
 
 import lombok.extern.slf4j.Slf4j;
-import ma.plutus.vehicle_routing.dto.Location;
-import ma.plutus.vehicle_routing.dto.Vehicle;
-import ma.plutus.vehicle_routing.dto.VehicleRouteSolution;
-import ma.plutus.vehicle_routing.dto.Visit;
 
 
 

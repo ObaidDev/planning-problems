@@ -9,9 +9,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.trackswiftly.vehicle_routing.VehicleRoutingApplication;
 
 import lombok.extern.slf4j.Slf4j;
-import ma.plutus.vehicle_routing.VehicleRoutingApplication;
 
 @Slf4j
 @SpringBootTest
