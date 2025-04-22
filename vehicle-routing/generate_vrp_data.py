@@ -17,9 +17,9 @@ def generate_dummy_vrp_data(
 ):
     # Set default geographical boundaries (New York area coordinates)
     if south_west_corner is None:
-        south_west_corner = [40.6971494, -74.2598655]
+        south_west_corner = [33.031741, -7.695507]
     if north_east_corner is None:
-        north_east_corner = [40.897589, -73.6995653]
+        north_east_corner = [32.397405, -5.870404]
 
     def generate_random_location():
         lat = random.uniform(south_west_corner[0], north_east_corner[0])
@@ -67,9 +67,9 @@ def generate_dummy_vrp_data(
 # Generate and save the data
 if __name__ == "__main__":
     data = generate_dummy_vrp_data(
-        num_vehicles=15,
-        num_visits=150,
-        vehicle_capacity=60,
+        num_vehicles=100,
+        num_visits=1000,
+        vehicle_capacity=70,
         min_demand=4,
         max_demand=8
     )
